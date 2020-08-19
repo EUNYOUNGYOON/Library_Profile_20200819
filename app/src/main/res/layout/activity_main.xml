@@ -10,15 +10,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:gravity="center"
-        android:padding="15dp">
+        android:padding="15dp"
+        android:background="@color/skyBlue">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/IU_img"
-            android:scaleType="centerCrop"/>
+            android:src="@drawable/ic_iu_img"
+            android:scaleType="centerCrop"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IU"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 

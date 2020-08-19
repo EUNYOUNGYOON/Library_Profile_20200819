@@ -3,6 +3,8 @@ package kr.co.tjoeun.library_profile_20200819
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -28,5 +30,9 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setValues() {
+
+        // Glide로 웹상의 차은우 사진을 프사로 반영
+        // 해당 upload는 인터넷을 써야하기에 그냥 쓸 순 없고, 권한을 적용해야함. Manifest.xml
+        Glide.with(mContext).load("https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/170924_%ED%91%B8%EB%93%9C%ED%8A%B8%EB%9F%AD%EC%9D%B4%EB%B2%A4%ED%8A%B8.jpg/250px-170924_%ED%91%B8%EB%93%9C%ED%8A%B8%EB%9F%AD%EC%9D%B4%EB%B2%A4%ED%8A%B8.jpg").into(profilePhotoImg)
     }
 }
